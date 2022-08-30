@@ -1,0 +1,282 @@
+{
+	"info": {
+		"_postman_id": "91b0502d-e0c2-488f-b766-2e5a4d0a64ca",
+		"name": "kakashi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "交易账号",
+			"item": [
+				{
+					"name": "新建交易账户",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"cv\",\n    \"apiKey\": \"dhbjERy7jlwxBiJGu4d2kfzc04h9tcHKTk8ngsZJO2dDQKCzUiDQueNH9LAhVrao\",\n    \"secretKey\": \"6mcTUgvnPkwqHk5GnpdH0EJPUGJHRqh287ailLOTt2Zou7JSLNm8vDzIdcnqhp2I\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/account",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "更新交易账户",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"cv0\",\n    \"apiKey\": \"dhbjERy7jlwxBiJGu4d2kfzc04h9tcHKTk8ngsZJO2dDQKCzUiDQueNH9LAhVrao\",\n    \"secretKey\": \"6mcTUgvnPkwqHk5GnpdH0EJPUGJHRqh287ailLOTt2Zou7JSLNm8vDzIdcnqhp2I\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/account/5b9515a7e40941a195e5e8cc1c011656",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"account",
+								"5b9515a7e40941a195e5e8cc1c011656"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "通过ID获得账户",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/account/5b9515a7e40941a195e5e8cc1c011656",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"account",
+								"5b9515a7e40941a195e5e8cc1c011656"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "通过名称查询账户",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/accounts/cv",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"accounts",
+								"cv"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获得所有账户",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/accounts",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "删除交易账户",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/account/c408e804eb2043e3b4ba74541a2f7865",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"account",
+								"c408e804eb2043e3b4ba74541a2f7865"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "账号状态",
+			"item": [
+				{
+					"name": "通过账户ID获得状态",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/state/5b9515a7e40941a195e5e8cc1c011656",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"state",
+								"5b9515a7e40941a195e5e8cc1c011656"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "所有账户状态",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/states",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"states"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "订单",
+			"item": [
+				{
+					"name": "取消订单",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/account/5b9515a7e40941a195e5e8cc1c011656/symbol/ETHUSDT/order/8389765538890250376",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"account",
+								"5b9515a7e40941a195e5e8cc1c011656",
+								"symbol",
+								"ETHUSDT",
+								"order",
+								"8389765538890250376"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "限价买单开仓",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"orderType\": \"LIMIT\",\n    \"tradeSide\": \"BUY\",\n    \"quantity\": 0.02,\n    \"price\": 500,\n    \"isOpen\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/account/5b9515a7e40941a195e5e8cc1c011656/symbol/ETHUSDT/order",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"account",
+								"5b9515a7e40941a195e5e8cc1c011656",
+								"symbol",
+								"ETHUSDT",
+								"order"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "{{local_url}}",
+			"type": "string"
+		},
+		{
+			"key": "test_url",
+			"value": "http://35.79.47.22:9630",
+			"type": "string"
+		},
+		{
+			"key": "local_url",
+			"value": "http://127.0.0.1:8080",
+			"type": "string"
+		}
+	]
+}
